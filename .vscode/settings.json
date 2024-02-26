@@ -1,0 +1,5 @@
+{
+    "php.suggest.basic": false,
+    "phpserver.phpPath": "C:/xampp/php/php.exe",
+    "phpserver.phpConfigPath": "C:/xampp/php/php.ini"
+}
