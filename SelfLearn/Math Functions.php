@@ -7,6 +7,7 @@
 </head>
 <body>
     <form action="Math Functions.php" method="post">
+        <!--
         <label for="x">x: </label>
         <input type="text" name="x"><br>
         <label for="y">y: </label>
@@ -14,12 +15,16 @@
         <label for="z">z: </label>
         <input type="text" name="z">
         <input type="submit" value="Total">
+        -->
+        <label for="radius">Radius: </label>
+        <input type="text" name="radius">
+        <input type="submit" value="Calculate">
     </form>
 </body>
 </html>
 
 <?php
-    $x = $_POST["x"];
+    /*$x = $_POST["x"];
     $y = $_POST["y"];
     $z = $_POST["z"];
     $total = null;
@@ -33,7 +38,27 @@
     //$total = max($x, $y, $z);
     //$total = min($x, $y, $z);
     //$total = pi();
-    $total = rand(1, 9);
+    //$total = rand(1, 9);
 
     echo $total;
+    */
+
+    $radius = $_POST["radius"];
+    $circumference = null;
+    $area = null;
+    $volume = null;
+
+    $circumference = 2 * pi() * $radius;
+    $circumference = round($circumference, 2);
+
+    $area = pi() * pow($radius, 2);
+    $area = round($area, 2);
+
+    $volume = 4/3 * pi() * pow($radius, 3);
+    $volume = round($volume);
+
+    echo "Circumference = $circumference cm" . "<br>";
+    echo "Area = $area cm^2" . "<br>";
+    echo "Volume = $volume cm^3" . "<br>";
+
 ?>
