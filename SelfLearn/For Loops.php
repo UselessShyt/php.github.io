@@ -7,8 +7,8 @@
 </head>
 <body>
     <form action="For Loops.php" method="post">
-        <label for="counter">Enter a number to count down from: </label>
-        <input type="text" name="counter">
+        <label for="counter">Enter a number to count down from: </label><br>
+        <input type="text" name="counter"><br>
         <input type="submit" value="count">
     </form>
 </body>
@@ -19,7 +19,7 @@
     $counter = $_POST["counter"];
 
     for($i=$counter; $i > 0; $i--){ 
-        echo $i . "br";
+        echo $i . "<br>";
     }
 
 ?>
