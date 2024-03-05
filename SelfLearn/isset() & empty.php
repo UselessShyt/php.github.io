@@ -22,4 +22,17 @@
         echo "{$key} = {$value} <br>";
     }
 
+    if(isset($_POST["login"])){
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        if(empty($username)){
+            echo"Username is empty";
+        }elseif(empty($password)){
+            echo"Password is empty";
+        }else{
+            echo"Hello {$username}";
+        }
+    }
+
 ?>
