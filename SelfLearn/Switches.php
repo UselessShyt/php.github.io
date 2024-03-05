@@ -35,5 +35,6 @@
             break;
         default:
             echo "{$grade} is not a grade";
-}
+    }
+    
 ?>
