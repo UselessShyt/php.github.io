@@ -6,10 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="Checkboxes.php" method="post">
+        <input type="checkbox" name="foods[]" value="Pizza">
+        Pizza <br>
+        <input type="checkbox" name="foods[]" value="Hamburger">
+        Hamburger <br>
+        <input type="checkbox" name="foods[]" value="Hotdog">
+        Hotdog <br>
+        <input type="checkbox" name="foods[]" value="Taco">
+        Taco <br>
+        <input type="submit" name="submit">
+    </form>
 </body>
 </html>
 
 <?php
+    $foods = $_POST["foods"];
 
+    if (isset($_POST["submit"])) {
+        foreach ($foods as $food) {
+            echo $food . "<br>";
+        }
+    }
 ?>
