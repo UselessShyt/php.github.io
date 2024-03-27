@@ -38,8 +38,7 @@
                 echo ("Registered");
             } catch (mysqli_sql_exception) {
                 echo ("The username has been taken");
-            }
-            
+            }         
         }
     }
 ?>
